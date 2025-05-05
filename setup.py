@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="codetree-cli",
-    version="0.2.1",
+    version="0.2.2",
     author="Reza Mardani", 
     author_email="mardanireza30@gmail.com",
     description="A tool for counting lines of code in a project.", 
