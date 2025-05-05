@@ -30,3 +30,23 @@ def print_directory_tree(path):
         for file, lines in folder_files[folder]:
             print(f"    └── {file} -> {lines} lines of code")
         print("")
+        
+def scan_directory(path):
+    """Scans the directory and prints a summary of all files and line counts."""
+    total_files = 0
+    total_lines = 0
+
+    print(f"\nScanning project folder: {path}\n")
+    print_directory_tree(path)
+
+    # Count total files and lines
+    for root, _, files in os.walk(path):
+        for file in files:
+            file_path = os.path.join(root, file)
+            lines = count_lines_of_code(file_path)
+            if lines > 0:
+                total_files += 1
+                total_lines += lines
+
+    print(f"Total files: {total_files}")
+    print(f"Total lines of code: {total_lines}")
