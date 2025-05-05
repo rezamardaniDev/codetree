@@ -1,4 +1,4 @@
-# Codetree
+# Codetree Cli
 
 Codetree is a Python tool that helps you count the lines of code in your project directory. It supports multiple programming languages and provides a detailed breakdown of the number of lines in your project files. Perfect for analyzing and tracking the size of your codebase in an easy-to-read format.
 
@@ -16,7 +16,7 @@ Codetree is a Python tool that helps you count the lines of code in your project
 Install Codetree directly from PyPI using pip:
 
 ```bash
-pip install codetree
+pip install codetree-cli
 ```
 
 ### Manual Installation
