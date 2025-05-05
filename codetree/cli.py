@@ -1,4 +1,5 @@
 import os
+import argparse
 from collections import defaultdict
 
 def count_lines_of_code(file_path):
@@ -50,3 +51,14 @@ def scan_directory(path):
 
     print(f"Total files: {total_files}")
     print(f"Total lines of code: {total_lines}")
+
+def main():
+    """Main function to handle argument parsing and execution."""
+    parser = argparse.ArgumentParser(description="Display folder tree with line counts.")
+    parser.add_argument("path", nargs="?", default=".", help="Path to the project directory (default: current)")
+    args = parser.parse_args()
+
+    if os.path.exists(args.path):
+        scan_directory(args.path)
+    else:
+        print(f"Path '{args.path}' not found.")
