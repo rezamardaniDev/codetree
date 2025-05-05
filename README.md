@@ -34,7 +34,7 @@ pip install .
 Use Codetree via the command-line interface (CLI). Run the following command in your terminal:
 
 ```bash
-codetree /path/to/your/project
+codetree
 ```
 
 This scans the specified directory (or current directory by default) and outputs the number of lines of code in each file, plus a summary of total lines.
